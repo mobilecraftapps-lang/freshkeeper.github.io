@@ -1,0 +1,273 @@
+# Fresh Keeper - Google Play Data Safety Section Guide
+
+This guide will help you accurately fill out the Data Safety section in Google Play Console to match your privacy policy.
+
+---
+
+## SECTION 1: Data Collection and Security
+
+### Does your app collect or share any of the required user data types?
+**Answer: YES**
+
+### Is all of the user data collected by your app encrypted in transit?
+**Answer: YES**
+(Your data is encrypted using SSL/TLS)
+
+### Do you provide a way for users to request that their data is deleted?
+**Answer: YES**
+(Users can email freshkeeperhelp@gmail.com to request deletion)
+
+---
+
+## SECTION 2: Data Types - Select ALL that apply
+
+### **Personal Info**
+
+#### ✅ Name
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality, Account management
+- **Explain:** "User's name from Google Sign-In is collected for account creation and personalization"
+
+#### ✅ Email address
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality, Account management
+- **Explain:** "Email is required for account creation, authentication, and customer support"
+
+#### ✅ User IDs
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality, Account management
+- **Explain:** "User IDs are created to uniquely identify accounts and manage user data"
+
+---
+
+### **Financial Info**
+
+#### ✅ Purchase history
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Optional
+- **Why is this data collected?** App functionality
+- **Explain:** "Users can optionally add product prices to track spending. This data is stored only for the user's personal tracking"
+
+---
+
+### **App Activity**
+
+#### ✅ App interactions
+- **Is this data collected, shared, or both?** Collected and Shared
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** Analytics, App functionality
+- **Explain:** "We collect app usage data through Firebase Analytics to improve app performance and user experience. This data is shared with Google (Firebase)"
+
+#### ✅ In-app search history
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality
+- **Explain:** "Search queries within the app are stored to help users quickly find their products in their inventory"
+
+#### ✅ Other user-generated content
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality
+- **Explain:** "Users create product inventory lists, shopping lists, and wastage reports which are stored in our database"
+
+#### ✅ Other actions
+- **Is this data collected, shared, or both?** Collected
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality, Analytics
+- **Explain:** "We track actions like marking products as used/wasted, creating shopping lists, and referral activities for app functionality and analytics"
+
+---
+
+### **App Info and Performance**
+
+#### ✅ Crash logs
+- **Is this data collected, shared, or both?** Collected and Shared
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** Analytics, App functionality
+- **Explain:** "Crash logs are collected via Firebase Crashlytics to identify and fix bugs. This data is shared with Google (Firebase)"
+
+#### ✅ Diagnostics
+- **Is this data collected, shared, or both?** Collected and Shared
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** Analytics, App functionality
+- **Explain:** "Diagnostic data including app performance metrics are collected through Firebase to improve app quality. This data is shared with Google (Firebase)"
+
+#### ✅ Other app performance data
+- **Is this data collected, shared, or both?** Collected and Shared
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** Analytics
+- **Explain:** "Performance data is collected via Firebase Analytics and shared with Google to monitor and improve app performance"
+
+---
+
+### **Device or Other IDs**
+
+#### ✅ Device or other IDs
+- **Is this data collected, shared, or both?** Collected and Shared
+- **Is this data processed ephemerally?** No
+- **Is this data required or optional?** Required
+- **Why is this data collected?** App functionality, Analytics, Advertising or marketing, Fraud prevention
+- **Explain:** "Device IDs are collected for push notifications, analytics via Firebase, and advertising via AdMob. Device tokens and advertising IDs are shared with Google (Firebase and AdMob)"
+
+---
+
+## SECTION 3: Data Sharing Details
+
+When you marked data as "Shared", you need to specify who you share it with:
+
+### For data shared with third parties:
+
+**Third parties you share data with:**
+1. **Google LLC (Firebase Services)**
+   - Analytics data
+   - Crash logs
+   - Diagnostics
+   - Device IDs
+   - App interactions
+
+2. **Google LLC (AdMob)**
+   - Device IDs (Advertising ID)
+   - App interactions (for ad serving)
+
+**Important:** In the Data Safety section, you should state:
+- ✅ Data is shared with third parties
+- ✅ Data is used for analytics purposes
+- ✅ Data is used for advertising purposes
+- ✅ Data is encrypted in transit
+- ✅ Users can request data deletion
+
+---
+
+## SECTION 4: Additional Important Settings
+
+### Security practices to highlight:
+- ✅ "Data is encrypted in transit" - YES (SSL/TLS)
+- ✅ "Users can request that data be deleted" - YES (via email)
+- ⚠️ "Data is encrypted at rest" - Check with Supabase settings (likely YES)
+- ⚠️ "You follow the Families Policy" - NO (unless targeting children)
+- ✅ "An independent security review has been performed" - Only if true
+
+### Privacy Policy URL:
+```
+https://mobilecraftapps-lang.github.io/freshkeeper.github.io/
+```
+
+---
+
+## IMPORTANT NOTES:
+
+### ⚠️ Common Mistakes to Avoid:
+
+1. **Don't forget AdMob data collection**: AdMob automatically collects device IDs and approximate location for ad serving
+
+2. **Firebase collects data too**: Even though you use Firebase, this counts as "sharing" data with Google
+
+3. **Premium features**: If premium users have different data collection (like exports), this should still be declared since ALL users see the data safety info
+
+4. **Referral leaderboard**: Since referral data is shown publicly, this counts as "sharing" but with other users, not third parties
+
+### 📝 Data NOT Collected (You can answer NO to these):
+
+- ❌ Precise location
+- ❌ Approximate location (unless AdMob collects it - check your AdMob settings)
+- ❌ Audio files
+- ❌ Photos
+- ❌ Videos
+- ❌ Video files (unless users can add product videos)
+- ❌ Music files
+- ❌ Other files
+- ❌ Calendar events
+- ❌ Contacts
+- ❌ Voice or sound recordings
+- ❌ Health and fitness data
+- ❌ Messages (SMS, email, chat)
+- ❌ Physical address
+- ❌ Phone number
+- ❌ Race and ethnicity
+- ❌ Political or religious beliefs
+- ❌ Sexual orientation
+- ❌ Browsing history
+- ❌ Web bookmarks
+
+---
+
+## SECTION 5: Verification Checklist
+
+Before submitting, verify:
+
+- [ ] Privacy policy link is working and matches this data safety info
+- [ ] All Firebase services are accounted for (Analytics, Crashlytics, Cloud Messaging, Functions)
+- [ ] AdMob data collection is declared
+- [ ] Supabase storage is mentioned in privacy policy (not directly in Data Safety)
+- [ ] Premium features data collection is included
+- [ ] Data retention period matches privacy policy (24 months for analytics)
+- [ ] Contact email (freshkeeperhelp@gmail.com) is correct in privacy policy
+- [ ] Effective date is updated in privacy policy
+
+---
+
+## QUICK REFERENCE: What to Select
+
+**YES, we collect:**
+- Name (from Google Sign-In)
+- Email address
+- User IDs
+- Purchase history (optional product prices)
+- App interactions
+- In-app search history
+- User-generated content (inventory, lists)
+- Other actions (usage/wastage tracking)
+- Crash logs
+- Diagnostics
+- Performance data
+- Device IDs
+
+**YES, we share with third parties:**
+- App interactions → Firebase & AdMob
+- Crash logs → Firebase
+- Diagnostics → Firebase
+- Performance data → Firebase
+- Device IDs → Firebase & AdMob
+
+**Data collection purposes:**
+- ✅ App functionality
+- ✅ Analytics
+- ✅ Advertising or marketing (AdMob)
+- ✅ Account management
+- ✅ Fraud prevention, security, and compliance
+
+**Security:**
+- ✅ Encrypted in transit
+- ✅ Users can request deletion
+- ✅ Privacy policy provided
+
+---
+
+## Need Help?
+
+If Google Play Console rejects your Data Safety section, common reasons are:
+1. Privacy policy doesn't match Data Safety declarations
+2. Missing third-party data sharing declarations (Firebase, AdMob)
+3. Advertising data collection not properly declared
+4. Push notification data not declared
+
+Make sure everything in this guide matches your actual implementation!
+
+---
+
+**Last Updated:** January 13, 2026  
+**Created for:** Fresh Keeper by Mobile Craft
