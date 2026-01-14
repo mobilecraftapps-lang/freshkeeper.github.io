@@ -89,17 +89,29 @@ Premium subscribers gain access to:
 - Price changes will not affect your current subscription period; new prices apply upon renewal
 
 ### 4.5 Cancellation
-- You may cancel your subscription at any time through the App settings or by contacting us
+- You may cancel your subscription at any time through the Google Play Store
+  - Open Google Play Store app
+  - Go to Menu → Subscriptions → Fresh Keeper Premium
+  - Select Cancel Subscription
+- You can also manage subscriptions at https://play.google.com/store/account/subscriptions
 - Cancellation takes effect at the end of your current billing period
 - You will retain Premium access until the end of your paid period
 - No refunds or credits will be provided for partial subscription periods
 - Cancelling a subscription does not delete your account or data
+- For billing issues, contact Google Play Support
 
-### 4.6 No Refund Policy
-- All subscription fees are non-refundable
+### 4.6 Refund Policy
+- All subscription fees are non-refundable as per Google Play's refund policy
+- Refund requests must be made within 48 hours of purchase through Google Play Store
+- To request a refund:
+  - Visit https://play.google.com/store/account/subscriptions
+  - Select Fresh Keeper Premium
+  - Click "Request a refund" (available for 48 hours after purchase)
+- Refunds after 48 hours are at Google's discretion
 - We do not provide refunds or credits for partial months or years of service
 - No refunds are provided if your account is suspended or terminated for violation of these Terms
-- If you believe you were incorrectly charged, contact us within 7 days at freshkeeperhelp@gmail.com
+- If you believe you were incorrectly charged, contact Google Play Support first, then contact us at freshkeeperhelp@gmail.com
+- For billing disputes, Google Play's payment policies and terms apply
 
 ---
 
