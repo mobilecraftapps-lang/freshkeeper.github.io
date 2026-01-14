@@ -69,8 +69,9 @@ Premium subscribers gain access to:
 - **Monthly Subscription:** ₹99 per month
 - **Annual Subscription:** ₹599 per year (equivalent to ₹49.92 per month)
 - All prices are in Indian Rupees (INR) and include applicable taxes
-- Payments are processed securely through Razorpay
-- By subscribing, you authorize us to charge your payment method on a recurring basis
+- Payments are processed securely through Google Play Billing
+- By subscribing, you authorize Google to charge your payment method on a recurring basis
+- All billing, refunds, and subscription management are handled by Google Play
 
 ### 4.3 Free Trial Through Referrals
 - Users can earn Premium access by referring new users
