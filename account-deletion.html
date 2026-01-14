@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Fresh Keeper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #9b7bd5 0%, #7858b4 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #9b7bd5 0%, #8a6ac4 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #9b7bd5;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .warning-box {
+            background: #fff9e6;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .warning-box h3 {
+            color: #f57c00;
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .warning-box p {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .data-list {
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .data-list h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .data-list li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .data-list li:before {
+            content: "✓";
+            color: #9b7bd5;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .steps {
+            background: #f0f0f0;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .steps h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .steps ol {
+            padding-left: 20px;
+            color: #555;
+        }
+        
+        .steps li {
+            padding: 8px 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .email-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #9b7bd5 0%, #8a6ac4 100%);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(155, 123, 213, 0.3);
+            margin: 20px 0;
+        }
+        
+        .email-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(155, 123, 213, 0.4);
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 35px 0;
+        }
+        
+        .info-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .info-box h3 {
+            color: #2e7d32;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .info-box p {
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .footer {
+            background: #f8f8f8;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #9b7bd5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .header p {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗑️ Delete Your Account</h1>
+            <p>Fresh Keeper by Mobile Craft</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Account Deletion Request</h2>
+                <p>We're sorry to see you go! If you wish to delete your Fresh Keeper account and all associated data, we're here to help you through the process.</p>
+            </div>
+            
+            <div class="warning-box">
+                <h3>⚠️ Important Notice</h3>
+                <p><strong>Account deletion is permanent and cannot be undone.</strong> Once your account is deleted, you will lose access to all your data, including your product inventory, shopping lists, wastage reports, and any premium subscription benefits.</p>
+            </div>
+            
+            <div class="section">
+                <h2>What Data Will Be Deleted?</h2>
+                <p>When you request account deletion, the following information will be permanently removed from our servers:</p>
+                
+                <div class="data-list">
+                    <h3>Data to be Deleted:</h3>
+                    <ul>
+                        <li>Your account information (email, name, profile)</li>
+                        <li>All product inventory data (items, expiry dates, prices)</li>
+                        <li>Shopping lists and preferences</li>
+                        <li>Wastage tracking data and reports</li>
+                        <li>Usage analytics and app activity</li>
+                        <li>Premium subscription details</li>
+                        <li>Referral history and rewards</li>
+                        <li>Any notes or custom data you've added</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>How to Request Account Deletion</h2>
+                
+                <div class="steps">
+                    <h3>Follow these steps:</h3>
+                    <ol>
+                        <li><strong>Send an email</strong> to our support team at <strong>freshkeeperhelp@gmail.com</strong></li>
+                        <li><strong>Use the subject line:</strong> "Account Deletion Request"</li>
+                        <li><strong>Include the following information:</strong>
+                            <ul>
+                                <li>The email address associated with your Fresh Keeper account</li>
+                                <li>Confirm that you want to permanently delete your account</li>
+                                <li>Optional: Let us know why you're leaving (helps us improve)</li>
+                            </ul>
+                        </li>
+                        <li><strong>We will process your request</strong> within <strong>30 days</strong></li>
+                        <li><strong>You'll receive a confirmation email</strong> once deletion is complete</li>
+                    </ol>
+                </div>
+                
+                <div class="button-container">
+                    <a href="mailto:freshkeeperhelp@gmail.com?subject=Account%20Deletion%20Request&body=Hi%20Fresh%20Keeper%20Team,%0D%0A%0D%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20Fresh%20Keeper%20account.%0D%0A%0D%0AAccount%20Email:%20[Your%20Email%20Here]%0D%0A%0D%0AI%20understand%20that%20this%20action%20is%20permanent%20and%20all%20my%20data%20will%20be%20deleted.%0D%0A%0D%0AThank%20you." 
+                       class="email-button">
+                        📧 Send Deletion Request Email
+                    </a>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h3>⏱️ Processing Timeline</h3>
+                <p><strong>Your account and data will be deleted within 30 days</strong> of receiving your request. During this time, your account will be deactivated and you won't be able to access it. If you change your mind within this period, contact us immediately at freshkeeperhelp@gmail.com to cancel the deletion request.</p>
+            </div>
+            
+            <div class="section">
+                <h2>What About My Subscription?</h2>
+                <p>If you have an active Premium subscription:</p>
+                <ul style="margin-left: 20px; color: #555; line-height: 1.8;">
+                    <li>Your subscription will be cancelled immediately upon account deletion</li>
+                    <li>No refunds will be provided for any unused subscription time</li>
+                    <li>If you have a subscription through Razorpay, you may need to cancel it separately through your payment provider</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Before You Go...</h2>
+                <p>Consider these alternatives to account deletion:</p>
+                <ul style="margin-left: 20px; color: #555; line-height: 1.8; margin-top: 10px;">
+                    <li><strong>Export your data:</strong> Use the Export feature (Premium) to save your inventory and wastage history before deleting</li>
+                    <li><strong>Take a break:</strong> Simply uninstall the app - your data will remain safe if you want to return later</li>
+                    <li><strong>Cancel subscription:</strong> You can cancel Premium without deleting your account</li>
+                    <li><strong>Contact support:</strong> If you're facing issues, we're here to help at freshkeeperhelp@gmail.com</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Need Help?</h2>
+                <p>If you have questions about account deletion or need assistance with anything else, please contact our support team:</p>
+                <p style="margin-top: 15px;">
+                    <strong>Email:</strong> <a href="mailto:freshkeeperhelp@gmail.com" style="color: #9b7bd5; text-decoration: none; font-weight: 600;">freshkeeperhelp@gmail.com</a><br>
+                    <strong>Response Time:</strong> Within 3-5 business days
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Mobile Craft</strong> | Nagpur, India</p>
+            <p style="margin-top: 10px;">
+                <a href="https://mobilecraftapps-lang.github.io/freshkeeper.github.io/">Privacy Policy</a> | 
+                <a href="https://mobilecraftapps-lang.github.io/freshkeeper.github.io/terms">Terms & Conditions</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 13px; color: #999;">
+                © 2026 Mobile Craft. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
